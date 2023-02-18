@@ -148,6 +148,68 @@ body {
 
 }
 
+.carousel *, .carousel *::after, .carousel *::before
+{
+    box-sizing: border-box;
+    border-radius: 10px 0 0 10px;
+
+}
+
+.carousel
+{
+    width: 100vw;
+    height: 80vh;
+    position: relative;
+    padding: 0;
+
+
+}
+
+.slide 
+{
+    position: absolute;
+    inset: 0;
+}
+
+
+.carousel .carousel-list, .carousel .carousel-list .slide
+{
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-list 
+{
+    height: inherit;
+}
+
+.slide
+{
+    height: inherit;
+}
+
+
+.slide > img 
+{
+    display: block;
+    width: 100%;
+    height: inherit;
+    object-fit: cover;
+    object-position: center;
+}
+
+.carousel-button
+{
+    position:absolute;
+    width: 60px;
+    height: 60px;
+    background-color: aliceblue;
+    font-size: 10rem;
+    top: 50%;
+    padding: 0;
+    margin: 0;
+}
+
 
 
 
