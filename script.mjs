@@ -1,4 +1,4 @@
-import {navbar, getList, carousel} from './navbar.mjs'
+import {navbar, getList, carousel, changeSlide} from './navbar.mjs'
 //paintings data
 import { paintingsArray } from './data.mjs';
 
@@ -8,7 +8,7 @@ import { paintingsArray } from './data.mjs';
 navbar();
 getList();
 carousel();
-
+changeSlide();
 
 
 

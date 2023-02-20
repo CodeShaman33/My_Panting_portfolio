@@ -19,6 +19,7 @@ body {
 .title {
     font-size: 1.5rem;
     margin: .5rem;
+    margin-left: 2rem;
 }
 
 .navbar-links ul {
@@ -117,13 +118,25 @@ body {
 
 .side-menu
 {
-    width: 10rem;
+    width: 18rem;
     height: 80vh;
     background-color: aliceblue;
-    margin-top: 10px;
+    margin-top:  30px;
     border-radius: 0 10px 10px 0;
     background-color: rgb(53, 15, 88);
 
+}
+
+.side-menu ul
+{
+    list-style-type: none;
+    margin: 0;
+}
+
+.side-menu ul li
+{
+    padding: 6px;
+    border: 1px solid white;
 }
 
 .side-menu h1
@@ -140,11 +153,16 @@ body {
 
 .carousel
 {
-    margin-left: 10px;
+    margin: 30px 30px;
     width: 100%;
+
     background-color: aliceblue;
-    margin-top: 10px;
+   
     border-radius: 10px 0 0 10px;
+
+    -webkit-box-shadow: 5px 0px 51px 13px rgb(202, 205, 238);
+-moz-box-shadow: 5px 0px 51px 13px rgb(227, 228, 241);
+box-shadow: 5px 0px 51px 13px rgb(84, 89, 141);
 
 }
 
@@ -158,7 +176,7 @@ body {
 .carousel
 {
     width: 100vw;
-    height: 80vh;
+    height: 70vh;
     position: relative;
     padding: 0;
 
@@ -201,17 +219,55 @@ body {
 .carousel-button
 {
     position:absolute;
-    width: 60px;
-    height: 60px;
-    background-color: aliceblue;
-    font-size: 10rem;
+   
+    font-size: 4rem;
     top: 50%;
     padding: 0;
     margin: 0;
+    transform: translateY(-50%);
+    top: 50%;
+
 }
 
+.prev 
+{
+    left: 1rem;
+}
+
+.next 
+{
+    right: 1rem;
+}
+
+.carousel button 
+{
+    background: none;
+    border: none;
+    opacity: .7;
+    margin: 0;
+    padding: 0 20px;
+    border-radius: 30px;
+}
+
+.carousel button:hover
+{
+    opacity: 1;
+    -webkit-box-shadow: 4px -1px 37px 18px rgba(27, 101, 93, 1);
+-moz-box-shadow: 4px -1px 37px 18px rgba(27, 101, 93, 1);
+box-shadow: 4px -1px 37px 18px rgba(27, 101, 93, 1);
 
 
+}
+
+.carousel .carousel-list li[active = 'false']
+{
+    display: none;
+}
+
+.carousel .carousel-list li[active = 'true']
+{
+    display: block;
+}
 
 
 

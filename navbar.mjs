@@ -1,4 +1,4 @@
-import { paintingsArray, testArray} from "./data.mjs";
+import { paintingsArray, testArray, domElements, currentSlide} from "./data.mjs";
 
 
 function navbar() {
@@ -46,12 +46,65 @@ function carousel()
     {
         let listElement = document.createElement('li');
         listElement.classList.add('slide');
+        listElement.setAttribute('active', 'false');
+        domElements.push(listElement);
+
+
         
         let image = document.createElement('img');
         image.src = testArray[i];
         listElement.append(image);
         list.append(listElement);
     }
+
+    domElements[0].setAttribute('active', 'true');
+ 
+
+
 }
 
-export { navbar, getList, carousel };
+
+function changeSlide()
+{
+    let next = document.getElementById('next');
+    let prev = document.getElementById('prev');
+    let i = 0;
+
+    next.addEventListener('click', () => 
+    {
+        if (i === domElements.length - 1)
+        {
+            domElements[i].setAttribute('active', 'false');
+            i = 0;
+            domElements[i].setAttribute('active', 'true');
+            i += 1;
+
+        }
+
+        else
+        {
+            domElements[i].setAttribute('active', 'false');
+            domElements[i + 1].setAttribute('active', 'true');
+            i += 1;
+        }
+       
+        
+        
+        
+    })
+
+    prev.addEventListener('click', () => 
+    {
+        if (i === 0)
+        {
+            i = domElements.length - 1;
+        }
+        domElements[i].setAttribute('active', 'false');
+        domElements[i - 1].setAttribute('active', 'true');
+        i -= 1;
+        
+    });
+}
+
+
+export { navbar, getList, carousel, changeSlide };

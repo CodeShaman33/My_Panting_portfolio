@@ -33,4 +33,7 @@ let testArray =
     'https://images.unsplash.com/photo-1674574124475-16dd78234342?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
 ];
 
-export {paintingsArray, testArray};
+let domElements = [];
+let currentSlide = 0;
+
+export {paintingsArray, testArray, domElements, currentSlide};
