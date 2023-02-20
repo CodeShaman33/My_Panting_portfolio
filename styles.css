@@ -296,3 +296,71 @@ body {
     background-color: red;
     display: none;
 }
+
+#form
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: aliceblue;
+    padding: 30px 30px;
+}
+
+#form *
+{
+    border-radius: 5px;
+}
+
+#form *:not(label)
+{
+    margin-bottom: 30px;
+}
+
+.container[data-form='true']
+{
+    display: flex;
+    justify-content: center;
+
+}
+
+#form textarea
+{
+    width: 300px;
+    height: 200px;
+}
+
+#form input[type='submit']
+{
+    background-color: rgb(74, 182, 74);
+    padding: 10px;
+    font-size: medium;
+    border-radius: 15px;
+    margin: 0 30px;
+    
+}
+
+#form input[type='submit']:hover
+{
+    background-color: rgb(20, 95, 20);
+    margin: 0;
+    transition: 200ms margin ease-in-out;
+    
+}
+
+#form input:not(input[type='submit']), select
+{
+    padding: 5px 0;
+}
+
+#form input:not(input[type='submit']):focus, select:focus
+{
+    border: 4px solid rgb(55, 119, 172);
+}
+
+#form label 
+{
+    margin-bottom: 3px;
+}
+
+
+
