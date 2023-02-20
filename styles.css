@@ -129,24 +129,20 @@ body {
     border-radius: 15px;
     text-align: center;
     background-color: rgb(66, 23, 105);
-
     --webkit-box-shadow: 17px 18px 18px -12px rgba(66, 68, 90, 1);
     -moz-box-shadow: 17px 18px 18px -12px rgba(66, 68, 90, 1);
     box-shadow: 17px 18px 18px -12px rgba(66, 68, 90, 1);
 
 }
 
-.side-menu h1:hover
-{
+.side-menu h1:hover {
     background-color: aquamarine;
 }
 
-.side-menu ul li:hover 
-{
+.side-menu ul li:hover {
     background-color: rgb(155, 42, 155);
     margin: 0;
     transition: 200ms margin ease;
-    transition: 200ms background-color ease;
 
 }
 
@@ -163,11 +159,8 @@ body {
 .carousel {
     margin: 30px 30px;
     width: 100%;
-
     background-color: aliceblue;
-
     border-radius: 10px 0 0 10px;
-
     -webkit-box-shadow: 5px 0px 51px 13px rgb(202, 205, 238);
     -moz-box-shadow: 5px 0px 51px 13px rgb(227, 228, 241);
     box-shadow: 5px 0px 51px 13px rgb(84, 89, 141);
