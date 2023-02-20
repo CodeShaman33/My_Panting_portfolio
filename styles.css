@@ -304,6 +304,8 @@ body {
     justify-content: center;
     color: aliceblue;
     padding: 30px 30px;
+    background-color: rgb(36, 11, 68);
+    border-radius: 20px;
 }
 
 #form *
@@ -316,7 +318,7 @@ body {
     margin-bottom: 30px;
 }
 
-.container[data-form='true']
+.form-container[data-form='true']
 {
     display: flex;
     justify-content: center;
@@ -362,5 +364,13 @@ body {
     margin-bottom: 3px;
 }
 
+#error
+{
+    background-color: brown;
+    text-align: center;
+    padding: 5px;
+    visibility:hidden;
 
+
+}
 

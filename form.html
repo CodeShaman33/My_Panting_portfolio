@@ -25,13 +25,15 @@
 
     </div>
 
-    <div class="container" data-form="true">
+
+    <div id="error">error</div>
+    <div class="form-container" data-form="true">
         <form id="form">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" >
           
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" >
           
             <label for="dropdown">Subject:</label>
             <select name="subject" id="dropdown">
@@ -41,12 +43,13 @@
             </select>
           
             <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
+            <textarea id="message" name="message" ></textarea>
           
             <input type="submit" value="Send Email">
         </form>
     </div>
 
     <script type="module" src="script.mjs"></script>
+    <script type="module" src="form.mjs"></script>
 </body>
 </html>
