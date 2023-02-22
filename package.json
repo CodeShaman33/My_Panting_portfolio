@@ -1,5 +1,13 @@
 {
   "dependencies": {
-    "nodemailer": "^6.9.1"
+    "nodemailer": "^6.9.1",
+    "webpack": "^5.75.0"
+  },
+  "devDependencies": {
+    "@nuxt/webpack": "^2.16.0",
+    "webpack-cli": "^5.0.1"
+  },
+  "scripts": {
+    "build": "webpack --config webpack.config.mjs"
   }
 }
