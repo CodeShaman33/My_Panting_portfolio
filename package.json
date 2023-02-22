@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "express": "^4.18.2",
     "nodemailer": "^6.9.1",
     "webpack": "^5.75.0"
   },
@@ -9,5 +10,19 @@
   },
   "scripts": {
     "build": "webpack --config webpack.config.mjs"
-  }
+  },
+  "name": "portfolio-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeShaman33/My_Panting_portfolio.git"
+  },
+  "author": "Marcin Dończyk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeShaman33/My_Panting_portfolio/issues"
+  },
+  "homepage": "https://github.com/CodeShaman33/My_Panting_portfolio#readme",
+  "description": ""
 }

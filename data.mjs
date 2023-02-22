@@ -36,4 +36,35 @@ let testArray =
 let domElements = [];
 let currentSlide = 0;
 
-export {paintingsArray, testArray, domElements, currentSlide};
+let passionsArray = 
+[
+    {
+        id: 1,
+        title: 'Programming',
+        description: 'programming description',
+        svg: './src/programming-svgrepo-com.svg'
+    },
+    {
+        id: 2,
+        title: 'Painting',
+        description: 'coding description',
+        svg: './src/painting-svgrepo-com.svg'
+    },
+    {
+        id: 3,
+        title: 'Playing Djembe',
+        description:'music description',
+        svg: './src/djembe-svgrepo-com.svg'   
+     },
+    {
+        id: 4,
+        title: 'Literature',
+        description: 'cooking description',
+        svg: './src/culture-svgrepo-com.svg'
+    }
+];
+
+let aboutMe = 'about me description';
+
+
+export {paintingsArray, testArray, domElements, currentSlide, passionsArray, aboutMe};

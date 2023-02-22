@@ -1,84 +1,68 @@
-import nodemailer from 'nodemailer';
-function validateForm() {
-    const form = document.getElementById("form");
-    const name = document.getElementById("name");
-    const email = document.getElementById("email");
-    const subject = document.getElementById("dropdown");
-    const message = document.getElementById("message");
-    //error element
-    const errorElement = document.getElementById("error");
 
 
-    form.addEventListener("submit", (e) => {
+function handleForm()
+{
+    const form = document.getElementById('form');
+    form.addEventListener('submit', (e) => 
+    {
+        
+        //get valuesfrom form
+        console.log('submit');
+        const message = document.getElementById('message').value;
+        const name = document.getElementById('name').value;
+        const mail = document.getElementById('email').value;
+        const subject = document.getElementById('dropdown').value;
 
-        let messages = [];
-        if (name.value === "" || name.value === null) {
-            messages.push('name is required');
-
-        }
-
-        if (email.value === "" || email.value === null) {
-            messages.push('email is required');
-
-        }
-
-        if (email.value.includes("@") === false) {
-
-            messages.push('@ required');
-
-        }
-
-
-
-        if (messages.length > 0) {
-            e.preventDefault();
-            errorElement.innerText = messages.join(", ");
-            errorElement.style.visibility = "visible";
-
-        }
-
-        if(messages.length === 0 ) 
+        //crete object from values 
+        let messageData = 
         {
-            sendEmail(name.value, email.value, subject.value, message.value);
-            
+            'name': name,
+            'mail': mail,
+            'subject': subject,
+            'message': message
         }
 
+        sendToBackEnd(messageData);
+        displayItems();
+        
+
+    });
+}
+
+function sendToBackEnd(data) 
+{
 
 
-    })
+    console.log('function started');
+   
+    fetch("http://127.0.0.1:8888/todos", 
+    {
+        method: "POST",
+        body: JSON.stringify({data}),
+        headers:
+        {
+            "Content-type": "application/json"
+        }
+    });
+}
+
+function getItemsFromBackend()
+{
+    return fetch("http://127.0.0.1:8888/todos");
+    
+}
+
+function displayItems()
+{
+    let div = document.getElementById('messages');
+    let list = getItemsFromBackend();
+    div.innerHTML = JSON.stringify({list});
+
+
+  
+
 }
 
 
-export default validateForm();
 
-validateForm();
-
-
-function sendEmail(name, email, subject, message) {
-
-    let transporter = nodemailer.createTransport({
-        host: 'smtp.gmail.com',
-        port: 465,
-        secure: true, // true for 465, false for other ports
-        auth: {
-            user: 'dafirenze@wp.pl', // your email
-            pass: 'Zzx123nie' // your email account password
-        }
-    });
-
-
-    let mailOptions = {
-        from: '"Your Name" <your_email@example.com>', // sender address
-        to: 'recipient_email@example.com', // list of receivers
-        subject: 'Hello from Node.js', // Subject line
-        text: 'Hello world!', // plain text body
-        html: '<b>Hello world!</b>' // html body
-    };
-
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            return console.log(error);
-        }
-        console.log('Message sent: %s', info.messageId);
-    });
-}
+handleForm();

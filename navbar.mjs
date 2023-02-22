@@ -98,10 +98,17 @@ function changeSlide()
         if (i === 0)
         {
             i = domElements.length - 1;
+            domElements[i].setAttribute('active', 'true');
+            domElements[0].setAttribute('active', 'false');
+
+
         }
-        domElements[i].setAttribute('active', 'false');
-        domElements[i - 1].setAttribute('active', 'true');
-        i -= 1;
+        else{
+            domElements[i].setAttribute('active', 'false');
+            domElements[i - 1].setAttribute('active', 'true');
+            i -= 1;
+        }
+      
         
     });
 }
